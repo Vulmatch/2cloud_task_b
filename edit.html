@@ -1,0 +1,65 @@
+<html>
+<head>
+</head>
+<body>
+<form action="connect_db.php" method="POST">
+
+  <label for="fname">Product Name</label><br>
+  <input type="text" id="name" name="name" value=""><br>
+  
+  <label for="lname">Product Code:</label><br>
+  <input type="text" id="code" name="code" value=""><br><br>
+  
+  <label for="lname">Price:</label><br>
+  <input type="text" id="price" name="price" value=""><br><br>
+  
+  <label for="lname">Size:</label><br>
+  <input type="text" id="size" name="size" value=""><br><br>
+  
+  <label for="lname">Color:</label><br>
+  <input type="text" id="color" name="color" value=""><br><br>
+  
+  <input type="hidden" name="request" value="add">
+  <input type="submit" value="add">
+  
+</form>
+
+---------------------------------------------------------------------------
+<form action="connect_db.php" method="POST">
+
+  <label for="fname">Product Name</label><br>
+  <input type="text" id="name" name="name" value=""><br>
+  
+  <label for="lname">Product Code:</label><br>
+  <input type="text" id="code" name="code" value=""><br><br>
+  
+  <label for="lname">Price:</label><br>
+  <input type="text" id="price" name="price" value=""><br><br>
+  
+  <label for="lname">Size:</label><br>
+  <input type="text" id="size" name="size" value=""><br><br>
+  
+  <label for="lname">Color:</label><br>
+  <input type="text" id="color" name="color" value=""><br><br>
+  
+  <label for="lname">Id:</label><br>
+  <input type="text" id="id" name="id" value=""><br><br>
+  
+  <input type="hidden" name="request" value="update">
+  <input type="submit" value="Update">
+  
+</form>
+
+---------------------------------------------------------------------------
+
+<form action="connect_db.php" method="POST">
+
+  <label for="fname">Product Id</label><br>
+  <input type="text" id="id" name="id" value=""><br>
+  
+  <input type="hidden" name="request" value="delete">
+  <input type="submit" value="Delete">
+</form>
+<a href="main.html">Go to main page</a></span>
+</body>
+</html>

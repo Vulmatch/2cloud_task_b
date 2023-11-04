@@ -1,0 +1,47 @@
+<html>
+<head>
+</head>
+<body>
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "task_b";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+//$result = mysqli_query($conn,"SELECT * FROM PRODUCTS");
+
+$sql = "SELECT * FROM PRODUCTS";
+$result = $conn->query($sql);
+$data = $result->fetch_all(MYSQLI_ASSOC);
+?>
+<form action="main.php" method="post">
+Search <input type="text" name="search"><br>
+<input type ="submit">
+</form>
+
+<table border="1">
+  <tr>
+    <th>Name</th>
+    <th>Code</th>
+	<th>Price</th>
+	<th>Size</th>
+	<th>Color</th>
+	<th>id</th>
+  </tr>
+  <?php foreach($data as $row): ?>
+  <tr>
+    <td><?= htmlspecialchars($row['Name']) ?></td>
+    <td><?= htmlspecialchars($row['Code']) ?></td>
+	<td><?= htmlspecialchars($row['Price']) ?></td>
+	<td><?= htmlspecialchars($row['Size']) ?></td>
+	<td><?= htmlspecialchars($row['Color']) ?></td>
+	<td><?= htmlspecialchars($row['id']) ?></td>
+  </tr>
+  <?php endforeach ?>
+</table>
+ <a href="edit.html">Edit products</a></span>
+</body>
+</html>
